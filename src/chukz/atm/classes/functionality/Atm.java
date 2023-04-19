@@ -1,4 +1,4 @@
-package chukz;
+package chukz.atm.classes.functionality;
 
 public class Atm {
     private final int number;

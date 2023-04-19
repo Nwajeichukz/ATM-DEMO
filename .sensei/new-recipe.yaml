@@ -1,0 +1,25 @@
+id: Logging__Enforce_java.util.logging
+version: 10
+metadata:
+  name: "Logging: Enforce java.util.logging"
+  shortDescription: Do not use System.out.println to write log statements
+  level: error
+  language: java
+  enabled: true
+search:
+  methodcall:
+    name: println
+    "on":
+      field:
+        in:
+          class:
+            name: java.lang.System
+        name: out
+availableFixes:
+- name: use logger
+  actions:
+  - rewrite:
+      to: "logger.log(java.util.logging.Level.INFO,{{{ arguments.0 }}})"
+  - addField:
+      field: "private java.util.logging.Logger logger = Logger.getLogger({{{ name }}}.class.getName())"
+      target: parentClass
