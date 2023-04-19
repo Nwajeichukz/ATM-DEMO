@@ -6,7 +6,6 @@ public class Atm {
 
     private double balance;
 
-
     public Atm(int number, int pin) {
         this.number = number;
         this.pin = pin;

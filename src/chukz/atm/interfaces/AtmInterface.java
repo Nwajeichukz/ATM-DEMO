@@ -1,6 +1,5 @@
 package chukz.atm.interfaces;
 
-
 public interface AtmInterface  {
 
     void enterDetails();

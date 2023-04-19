@@ -76,7 +76,6 @@ public class AtmFunctionality extends Atm implements AtmInterface {
         logger.log(Level.INFO,st);
     }
 
-
     public void withDrawAmount(double withdrawAmount) {
         if(withdrawAmount >= 500) {
             if(withdrawAmount < getBalance()){

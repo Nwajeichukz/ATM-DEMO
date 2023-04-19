@@ -1,6 +1,5 @@
 package chukz.atm.classes.mainMethod;
 
-
 import chukz.atm.classes.functionality.AtmFunctionality;
 import chukz.atm.interfaces.AtmInterface;
 
